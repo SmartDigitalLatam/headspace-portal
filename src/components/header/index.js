@@ -27,15 +27,11 @@ import GraficosEcho2 from '../../views/graficosecho2';
 import GraficosEcho3 from '../../views/graficosecho3';
 import GraficosEcho4 from '../../views/graficosecho4';
 import GraficosClickIo from '../../views/graficosclickio';
-import Config from '../../views/config';
-import Historico from '../../views/historico_alarmes';
+
 
 import {Switch,Route,Redirect} from 'react-router-dom'
 const drawerWidth = 220;
 
-/* Local IP to connect with the WebSocket server .*/
-// const ip = '192.168.0.40';
-// const url = `ws://${ip}:4001`;
 
 
 const useStyles = makeStyles(theme => ({
@@ -137,15 +133,6 @@ export default function ClippedDrawer(url) {
               </ListItemText>
             </ListItem>
 
-            <ListItem button component="a" href='/historico'>
-              <ListItemIcon>
-                  <ReportProblemIcon />
-              </ListItemIcon>
-              <ListItemText>
-                  Histórico de alarmes
-              </ListItemText>
-            </ListItem>
-
             
           </List>
         
@@ -155,13 +142,11 @@ export default function ClippedDrawer(url) {
           <Switch>
             <Redirect exact from='/' to='/principal'/>
             <Route path='/principal' render={(props) => <Principal data={url.url}/>}/>
-            <Route path='/historico' component={Historico}/>
             <Route path='/graficosecho1' render={(props) => <GraficosEcho1 data={url.url}/>}/>
             <Route path='/graficosecho2' render={(props) => <GraficosEcho2 data={url.url}/>}/>
             <Route path='/graficosecho3' render={(props) => <GraficosEcho3 data={url.url}/>}/>
             <Route path='/graficosecho4' render={(props) => <GraficosEcho4 data={url.url}/>}/>
             <Route path='/graficosclickio' render={(props) => <GraficosClickIo data={url.url}/>}/>
-            {/* <Route path='/config' component={Config}/> */}
           </Switch>
         </main>
       </div>

@@ -7,7 +7,6 @@ import CardDataEntrada from '../../components/dados/cardData_viewPrincipal/entra
 import CardDataGraphs from '../../components/dados/cardData_viewPrincipal/graphs';
 import CardDataPermeado from '../../components/dados/cardData_viewPrincipal/permeado';
 import CardDataConcentrado from '../../components/dados/cardData_viewPrincipal/concentrado';
-import CardDataHistorico from '../../components/dados/cardData_viewPrincipal/historico';
 import CardDataRelatives from '../../components/dados/cardData_viewPrincipal/relatives';
 
 
@@ -40,11 +39,7 @@ export default function principal_menu(url) {
           </Grid>
         </div>
       </Grid>
-      <Grid item xs>
-        <div id="card_historico">
-          <CardDataHistorico/>
-        </div>  
-      </Grid>
+      
     </Grid>
   );
 }
