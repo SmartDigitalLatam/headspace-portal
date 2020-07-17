@@ -22,7 +22,11 @@ import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
 //Rotas .
 import Principal from '../../views/principal_menu';
-import Graficos from '../../views/graficos';
+import GraficosEcho1 from '../../views/graficosecho1';
+import GraficosEcho2 from '../../views/graficosecho2';
+import GraficosEcho3 from '../../views/graficosecho3';
+import GraficosEcho4 from '../../views/graficosecho4';
+import GraficosClickIo from '../../views/graficosclickio';
 import Config from '../../views/config';
 import Historico from '../../views/historico_alarmes';
 
@@ -88,12 +92,48 @@ export default function ClippedDrawer(url) {
               </ListItemText>
             </ListItem>
 
-            <ListItem button component="a" href='/graficos'>
+            <ListItem button component="a" href='/graficosecho1'>
               <ListItemIcon>
                   <BarChartIcon />
               </ListItemIcon>
               <ListItemText>
-                  Gráficos
+                  Gráficos ECHOWISE 1
+              </ListItemText>
+            </ListItem>
+
+            <ListItem button component="a" href='/graficosecho2'>
+              <ListItemIcon>
+                  <BarChartIcon />
+              </ListItemIcon>
+              <ListItemText>
+                  Gráficos ECHOWISE 2
+              </ListItemText>
+            </ListItem>
+
+            <ListItem button component="a" href='/graficosecho3'>
+              <ListItemIcon>
+                  <BarChartIcon />
+              </ListItemIcon>
+              <ListItemText>
+                  Gráficos ECHOWISE 3
+              </ListItemText>
+            </ListItem>
+
+            <ListItem button component="a" href='/graficosecho4'>
+              <ListItemIcon>
+                  <BarChartIcon />
+              </ListItemIcon>
+              <ListItemText>
+                  Gráficos ECHOWISE 4
+              </ListItemText>
+            </ListItem>
+
+            <ListItem button component="a" href='/graficosclickio'>
+              <ListItemIcon>
+                  <BarChartIcon />
+              </ListItemIcon>
+              <ListItemText>
+                  Gráficos ClickIo
               </ListItemText>
             </ListItem>
 
@@ -105,25 +145,10 @@ export default function ClippedDrawer(url) {
                   Histórico de alarmes
               </ListItemText>
             </ListItem>
-            {/* <ListItem button component="a" href='/config'>
-              <ListItemIcon>
-                  <SettingsIcon />
-              </ListItemIcon>
-              <ListItemText>
-                  Startup
-              </ListItemText>
-            </ListItem> */}
+
+            
           </List>
-          {/* <List>
-            <ListItem button component="a" href='/sair'>
-                <ListItemIcon>
-                    <ExitToAppIcon />
-                </ListItemIcon>
-                <ListItemText>
-                    Sair
-                </ListItemText>
-            </ListItem>
-          </List> */}
+        
         </Drawer>
         <main className={classes.content}>
           <div className={classes.toolbar} />
@@ -131,7 +156,11 @@ export default function ClippedDrawer(url) {
             <Redirect exact from='/' to='/principal'/>
             <Route path='/principal' render={(props) => <Principal data={url.url}/>}/>
             <Route path='/historico' component={Historico}/>
-            <Route path='/graficos' render={(props) => <Graficos data={url.url}/>}/>
+            <Route path='/graficosecho1' render={(props) => <GraficosEcho1 data={url.url}/>}/>
+            <Route path='/graficosecho2' render={(props) => <GraficosEcho2 data={url.url}/>}/>
+            <Route path='/graficosecho3' render={(props) => <GraficosEcho3 data={url.url}/>}/>
+            <Route path='/graficosecho4' render={(props) => <GraficosEcho4 data={url.url}/>}/>
+            <Route path='/graficosclickio' render={(props) => <GraficosClickIo data={url.url}/>}/>
             {/* <Route path='/config' component={Config}/> */}
           </Switch>
         </main>
