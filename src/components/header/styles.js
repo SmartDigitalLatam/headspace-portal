@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     *{
-        font-size: 19px;
+        font-size: 25px;
     }
     #header_menu{
         background-color:#009078;

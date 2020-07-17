@@ -3,43 +3,48 @@ import { Grid, Button } from '@material-ui/core';
 // import { Container } from './styles';
 
 //Dados
-import CardDataEntrada from '../../components/dados/cardData_viewPrincipal/entrada';
-import CardDataGraphs from '../../components/dados/cardData_viewPrincipal/graphs';
-import CardDataPermeado from '../../components/dados/cardData_viewPrincipal/permeado';
-import CardDataConcentrado from '../../components/dados/cardData_viewPrincipal/concentrado';
-import CardDataRelatives from '../../components/dados/cardData_viewPrincipal/relatives';
+import CardDataEcho4 from '../../components/dados/cardData_viewPrincipal/echo4';
+import CardDataEcho3 from '../../components/dados/cardData_viewPrincipal/echo3';
+import CardDataEcho2 from '../../components/dados/cardData_viewPrincipal/echo2';
+import CardDataEcho1 from '../../components/dados/cardData_viewPrincipal/echo1';
+import CardDataData from '../../components/dados/cardData_viewPrincipal/data';
 
 
 export default function principal_menu(url) {
   return (
     <Grid container spacing ={0.5}>
-      <Grid item xs={12}>
-        <Grid item xs>
-          <CardDataGraphs id="graph_card" url={url.data}/>
-        </Grid>
-        <br/>
-      </Grid>
-      <Grid item xs={8}> 
+      
+      <Grid item xs={30}> 
+        
         <div id='big_card'>  
-          <Grid container spacing={1}>
+          <Grid container spacing={6}>
+
           <Grid item xs={12}>
-              <CardDataRelatives url={url.data} />
+              <CardDataData url={url.data} />
             </Grid>
+            
             <Grid item xs={12}>
-              <CardDataEntrada url={url.data} />
+              <CardDataEcho1 url={url.data} />
+            </Grid>
+            
+            <Grid item xs={12}>
+              <CardDataEcho2 url={url.data} />
+            </Grid>
+            
+            <br/>
+            <Grid item xs={12}>
+              <CardDataEcho3 url={url.data}/>
             </Grid>
             <br/>
-            <Grid item xs={12} sm={6}>
-              <CardDataPermeado url={url.data}/>
+
+            <Grid item xs={12}>
+              <CardDataEcho4 url={url.data} />
             </Grid>
-            <br/>
-            <Grid item xs={12} sm={6}>
-              <CardDataConcentrado url={url.data}/>
-            </Grid>
+            
           </Grid>
         </div>
+
       </Grid>
-      
     </Grid>
   );
 }

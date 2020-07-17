@@ -66,7 +66,7 @@ export default function ClippedDrawer(url) {
         <AppBar position="fixed" className={classes.appBar}>
           <Toolbar id='header_menu'>
             <Typography variant="h6" noWrap>
-              Buckman
+              Buckman - Portal Usina Santa Fé
             </Typography>
           </Toolbar>
         </AppBar>
