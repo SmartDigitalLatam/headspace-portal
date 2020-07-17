@@ -28,6 +28,8 @@ import GwEcho3tlf from '../../graficos/linear/gwEcho3_tlf';
 import GwEcho3tlfcarry from '../../graficos/linear/gwEcho3_tlf_carry';
 import GwEcho3tlffraction from '../../graficos/linear/gwEcho3_tlf_fraction';
 import GwEcho3totaltlf from '../../graficos/linear/gwEcho3_total_tlf';
+import GwEcho3totalflow from '../../graficos/linear/gwEcho3_total_flow';
+
 
 
 
@@ -129,6 +131,10 @@ export default class linear_graph_grid_echo3 extends Component {
 
           <Grid item xs={12}>
             <GwEcho3tlffraction    data={this.props.url}/>
+          </Grid>
+
+          <Grid item xs={12}>
+            <GwEcho3totalflow   data={this.props.url}/>
           </Grid>
 
           <Grid item xs={12}>

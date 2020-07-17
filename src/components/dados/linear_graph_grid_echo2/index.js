@@ -25,7 +25,10 @@ import GwEcho2tlfcarry from '../../graficos/linear/gwEcho2_tlf_carry';
 import GwEcho2tlffraction from '../../graficos/linear/gwEcho2_tlf_fraction';
 import GwEcho2totalflow from '../../graficos/linear/gwEcho2_total_flow';
 import GwEcho2totaltlf from '../../graficos/linear/gwEcho2_total_tlf';
-
+import GwEcho2dispsos from '../../graficos/linear/gwEcho2_disp_sos';
+import GwEcho2disptlf from '../../graficos/linear/gwEcho2_disp_tlf';
+import GwEcho2gvf from '../../graficos/linear/gwEcho2_gvf';
+import GwEcho2sosflowrate from '../../graficos/linear/gwEcho2_sos_flow_rate';
 
 export default class linear_graph_grid_echo2 extends Component {
 
@@ -60,6 +63,14 @@ export default class linear_graph_grid_echo2 extends Component {
           </Grid>
 
           <Grid item xs={12}>
+            <GwEcho2dispsos  data={this.props.url}/>
+          </Grid>
+
+          <Grid item xs={12}>
+            <GwEcho2disptlf   data={this.props.url}/>
+          </Grid>
+
+          <Grid item xs={12}>
             <GwEcho2flowcarry   data={this.props.url}/>
           </Grid>
 
@@ -76,6 +87,10 @@ export default class linear_graph_grid_echo2 extends Component {
           </Grid>
 
           <Grid item xs={12}>
+            <GwEcho2gvf   data={this.props.url}/>
+          </Grid>
+
+          <Grid item xs={12}>
             <GwEcho2pressure   data={this.props.url}/>
           </Grid>
 
@@ -84,6 +99,10 @@ export default class linear_graph_grid_echo2 extends Component {
           </Grid>
           <Grid item xs={12}>
             <GwEcho2sosflowquality   data={this.props.url}/>
+          </Grid>
+
+          <Grid item xs={12}>
+            <GwEcho2sosflowrate   data={this.props.url}/>
           </Grid>
 
           <Grid item xs={12}>

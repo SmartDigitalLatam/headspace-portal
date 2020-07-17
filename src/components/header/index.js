@@ -21,7 +21,7 @@ import SettingsIcon from '@material-ui/icons/Settings';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
 //Rotas .
-import Principal from '../../views/principal_menu';
+import Dashboard from '../../views/dashboard';
 import GraficosEcho1 from '../../views/graficosecho1';
 import GraficosEcho2 from '../../views/graficosecho2';
 import GraficosEcho3 from '../../views/graficosecho3';
@@ -79,7 +79,7 @@ export default function ClippedDrawer(url) {
         >
           <div className={classes.toolbar} />
           <List>
-            <ListItem button component="a" href='/principal'> 
+            <ListItem button component="a" href='/dashboard'> 
               <ListItemIcon>
                   <DashboardIcon />
               </ListItemIcon>
@@ -140,8 +140,8 @@ export default function ClippedDrawer(url) {
         <main className={classes.content}>
           <div className={classes.toolbar} />
           <Switch>
-            <Redirect exact from='/' to='/principal'/>
-            <Route path='/principal' render={(props) => <Principal data={url.url}/>}/>
+            <Redirect exact from='/' to='/dashboard'/>
+            <Route path='/dashboard' render={(props) => <Dashboard data={url.url}/>}/>
             <Route path='/graficosecho1' render={(props) => <GraficosEcho1 data={url.url}/>}/>
             <Route path='/graficosecho2' render={(props) => <GraficosEcho2 data={url.url}/>}/>
             <Route path='/graficosecho3' render={(props) => <GraficosEcho3 data={url.url}/>}/>

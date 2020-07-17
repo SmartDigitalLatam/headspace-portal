@@ -5,7 +5,7 @@ Para rodar a aplicação na rede local de todo o estabelcimento altere o IP para
 Mudar package.json > "scripts" > "start": "serve -s build",
 
 
-ESTE É O CÓDIGO QUE ESTÁ SENDO MODIFICADO - TROCA DE GRÁFICO "ONLINE" POR GRÁFICO COM DADOS DO COSMODB - DATA: 26-maio-2020
+ESTE É O CÓDIGO QUE ESTÁ SENDO MODIFICADO - TROCA DE GRÁFICO "ONLINE" POR GRÁFICO COM DADOS DO COSMODB 
 
 PARA DEPLOY, REALIZAR A MODIFICAÇÃO FINAL:
 
