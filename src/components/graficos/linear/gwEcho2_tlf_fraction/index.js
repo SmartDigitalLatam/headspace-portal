@@ -18,7 +18,7 @@ class GwEcho2_tlf_fraction extends Component{
     
     getChartData(){
         //acessando a URL do backend 
-       axios.get("http://localhost:3000/headspace_dev1").then(res => {
+       axios.get("https://headspace-back.azurewebsites.net/headspace_dev1").then(res => {
      
         //pegando valor do api - uri - localhost
         const value = res.data;
